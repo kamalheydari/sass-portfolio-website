@@ -1,0 +1,16 @@
+//  * Variables Dark theme * //
+$dark-colors: (
+  first-color-second: hsl($hue-color, 30%, 8%),
+  title-color: hsl($hue-color, 8%, 90%),
+  text-color: hsl($hue-color, 8%, 75%),
+  input-color: hsl($hue-color, 29%, 16%),
+  body-color: hsl($hue-color, 20%, 6%),
+  container-color: hsl($hue-color, 29%, 16%),
+  shadow-color: rgba(153, 153, 153, 0.1),
+);
+
+body.dark-theme {
+  @each $name, $color in $dark-colors {
+    --#{$name}: #{$color};
+  }
+}

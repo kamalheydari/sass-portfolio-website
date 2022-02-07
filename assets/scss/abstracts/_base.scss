@@ -1,0 +1,36 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: getColor(body-color);
+  color: getColor(text-color);
+  margin: 0 0 $header-height 0;
+  @include responsive(md) {
+    margin: 0;
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+}
+section,
+.footer__content {
+  margin: 0 auto;
+  max-width: $max-width;
+  padding: $s-3-5 $s-2 $s-5-5;
+}
+section {
+  @include responsive(md) {
+    padding: $s-5-5 $s-2 $s-5-5;
+    padding: 8rem $s-2 $s-5-5;
+  }
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: getColor(title-color);
+}

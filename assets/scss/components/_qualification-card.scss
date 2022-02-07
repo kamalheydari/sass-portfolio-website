@@ -1,0 +1,43 @@
+.qualification__section {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    justify-items: center;
+    column-gap: $s-2-5;
+    .data {
+      &__title {
+        font-size: $s-1-5;
+        font-weight: 500;
+      }
+      &__subtitle {
+        display: inline-block;
+        margin: $s-0-25 0rem $s-0-5;
+        font-size: $s-1-5;
+    }
+    &__calender {
+        display: flex;
+        align-items: center;
+        column-gap: $s-0-5;
+        font-size: $s-1-5;
+        margin-bottom: $s-1-5 ;
+      }
+    }
+
+    .shape {
+      &__rounder {
+        display: block;
+        height: 13px;
+        width: 13px;
+        border-radius: 50%;
+        background-color: getColor(first-color);
+      }
+      &__line {
+        display: block;
+        width: 1px;
+        height: 100%;
+        background-color: getColor(first-color);
+        transform: translate(6px, -7px);
+      }
+    }
+  }
+}

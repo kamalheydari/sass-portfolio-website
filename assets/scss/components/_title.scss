@@ -1,0 +1,13 @@
+.section__title {
+  margin-bottom: $s-4;
+  h2 {
+    margin-bottom: $s-0-25;
+    text-align: center;
+  }
+  span {
+    display: block;
+    font-size: $s-1-5;
+    font-weight: 600;
+    text-align: center;
+  }
+}

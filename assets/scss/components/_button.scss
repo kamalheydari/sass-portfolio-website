@@ -1,0 +1,17 @@
+.btn {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    column-gap: $s-1;
+    background-color: getColor(first-color);
+    color: #fff;
+    font-size: 1.6rem;
+    padding:$s-0-75 $s-1-5;
+    border-radius: $s-0-5;
+    font-weight: 500;
+    transition: background-color 0.15s;
+    
+    &:hover {
+      background-color: getColor(first-color-alt);
+    }
+  }

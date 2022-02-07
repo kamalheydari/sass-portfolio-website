@@ -1,0 +1,47 @@
+.service__modal {
+  background-color: rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .modal {
+    &__container {
+      background-color: getColor(container-color);
+      padding: $s-2 $s-3;
+      border-radius: $s-0-75;
+      margin: $s-1-5;
+      width: min(100%,50rem);
+    }
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $s-2;
+      h4 {
+        font-weight: 400;
+      }
+      i {
+        color: getColor(first-color);
+      }
+    }
+    &__list li {
+      display: flex;
+      align-items: center;
+      column-gap: $s-1;
+      margin: $s-1 0;
+    }
+  }
+}

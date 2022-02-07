@@ -1,0 +1,12 @@
+{
+  "name": "sass-portfolio-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch assets/scss/styles.scss assets/css/styles.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,63 @@
+.project {
+  padding-left: 0;
+  padding-right: 0;
+  &__content {
+    display: grid;
+    justify-items: center;
+    row-gap: $s-1;
+    background-color: getColor(first-color-second);
+    padding-top: $s-5;
+    padding-bottom: 0;
+    text-align: center;
+    @include responsive(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include responsive(md) {
+      margin-right: $s-2;
+      margin-left: $s-2;
+      border-radius: $s-1-5;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: $s-1;
+
+    @include responsive(sm) {
+      grid-column: 1/2;
+    }
+    h3,
+    p {
+      color: #fff;
+    }
+    a {
+      display: flex;
+      width: max-content;
+      align-items: center;
+      column-gap: $s-1;
+      background-color: #fff;
+      color: getColor(first-color);
+      align-self: center;
+      font-size: 1.6rem;
+      padding: $s-0-75 $s-1-5;
+      border: 0.3rem solid #fff;
+      border-radius: $s-0-5;
+      font-weight: 500;
+      transition: 0.3s;
+      &:hover {
+        background-color: getColor(first-color-second);
+        color: #fff;
+      }
+    }
+  }
+  &__img {
+    align-self: center;
+    width: 230px;
+    @include responsive(sm) {
+      grid-column: 2/3;
+    }
+    @include responsive(md) {
+      width: 380px;
+    }
+  }
+}

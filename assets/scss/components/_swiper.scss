@@ -1,0 +1,18 @@
+
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}
+
+.swiper-button-prev {
+  left: -0.5rem;
+}
+.swiper-button-next {
+  right: -0.5rem;
+}
+
+.swiper-button-prev i,
+.swiper-button-next i {
+  color: getColor(first-color);
+}

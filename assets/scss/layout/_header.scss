@@ -1,0 +1,128 @@
+.header {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: $header-height;
+  width: 100%;
+  z-index: 10;
+  background-color: getColor(body-color);
+  padding: 0 $s-1;
+  @include responsive(md) {
+    top: 0;
+    bottom: initial;
+    padding: $s-3 $s-2;
+  }
+  
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    @include responsive(md) {
+      max-width: $max-width;
+      margin: 0 auto;
+    }
+    
+  }
+
+  &__nav {
+    position: fixed;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: $s-1-5 $s-1-5 0 0;
+    padding: $s-2 $s-1-5 $s-4;
+    background-color: getColor(body-color);
+    z-index: 100;
+    transition: bottom 0.4s ease;
+    @include responsive(md) {
+      padding: 0;
+      border-radius: 0;
+      bottom: initial;
+      left: initial;
+      position: initial;
+      box-shadow: none;
+      border-radius: none;
+      width: max-content;
+      margin-left: auto;
+    }
+  }
+
+  &__btns {
+    button {
+      margin-left: $s-1;
+    }
+    &-open-menu {
+      @include responsive(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__brand,
+  &__btns button {
+    color: getColor(title-color);
+    transition: color 0.15s;
+    &:hover {
+      color: getColor(first-color);
+    }
+  }
+
+  .nav {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: $s-4;
+      margin-bottom: $s-2;
+      @include responsive(md) {
+        display: flex;
+        gap: 0 $s-2;
+        margin-bottom: 0;
+      }
+    }
+    &__link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: $s-1;
+      color: getColor(title-color);
+
+      transition: color 0.15s;
+      &:hover {
+        color: getColor(first-color);
+      }
+
+      i {
+        @include responsive(md) {
+          display: none;
+        }
+      }
+    }
+    &__item {
+      transition: 0.3s;
+      &--active {
+        color: getColor(first-color);
+      }
+    }
+    &__close-btn {
+      color: getColor(first-color);
+      position: absolute;
+      right: $s-1-5;
+      bottom: $s-0-5;
+      @include responsive(md) {
+        display: none;
+      }
+    }
+  }
+}
+
+//! show nav-menu
+.show {
+  bottom: 0;
+}
+
+//! scroll header shadow
+.scroll-header {
+  box-shadow: 0 -2px 8px getColor(shadow-color) ;
+}

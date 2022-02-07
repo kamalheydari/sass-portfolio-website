@@ -1,0 +1,34 @@
+body {
+  font-family: $body-font;
+}
+html {
+  font-size: 0.625rem;
+  @include responsive(lg){
+    font-size: 0.675rem;
+  }
+ 
+}
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+h4 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.7rem;
+}
+span {
+  font-size: 1.3rem;
+}
+input {
+  font-size: 1.5rem;
+}
+a {
+  font-size: 1.6rem;
+}

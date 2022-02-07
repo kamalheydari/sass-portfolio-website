@@ -1,0 +1,38 @@
+.portfolio__card {
+  display: grid;
+  row-gap: $s-2;
+  padding: $s-2;
+
+  @include responsive(md) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: $s-2;
+    align-items: center;
+  }
+  .card {
+    &__img {
+      width: 265px;
+      overflow: hidden;
+      justify-self: center;
+      img {
+        border-radius: $s-1;
+      }
+    }
+
+    &__data {
+      h4 {
+        margin-bottom: $s-1;
+      }
+      p {
+        margin-bottom: $s-0-75;
+      }
+      button {
+        i {
+          transition: 0.3s;
+        }
+        &:hover i {
+          transform: translateX($s-0-25);
+        }
+      }
+    }
+  }
+}

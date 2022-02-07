@@ -1,0 +1,32 @@
+.testimonial__card {
+  display: flex;
+  flex-direction: column;
+  row-gap: $s-2;
+
+  .card {
+    &__header {
+      display: flex;
+      column-gap: $s-1;
+    }
+  }
+
+  .header {
+    &__img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    &__text {
+      span {
+        color: getColor(text-color-light);
+      }
+      h4 {
+        font-weight: 300;
+      }
+    }
+    &__stars {
+      margin-left: auto;
+      color: getColor(first-color);
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.service__card {
+  padding: $s-1-5 $s-2;
+  background-color: getColor(container-color);
+  box-shadow: $shadow;
+  transition: 0.2s;
+  border-radius: $s-0-25;
+
+  width: min(100%,32rem);
+  &:hover {
+    box-shadow: $shasow-hover;
+  }
+  .card {
+    &__icon {
+      color: getColor(first-color);
+      margin-bottom: $s-1;
+    }
+    &__title {
+      margin-bottom: $s-1;
+      font-weight: 400;
+    }
+    &__btn {
+      color: getColor(first-color);
+      display: flex;
+      align-items: center;
+      column-gap: $s-0-5;
+      font-size: $s-1-5;
+      i {
+        transition: 0.3s;
+      }
+      &:hover i {
+        transform: translateX(7px);
+      }
+    }
+  }
+}

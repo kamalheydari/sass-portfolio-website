@@ -1,0 +1,51 @@
+.footer {
+  background-color: getColor(first-color-second);
+  &__content {
+    display: grid;
+    row-gap: $s-3;
+    @include responsive(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__subtitle {
+    font-size: $s-2;
+  }
+
+  &__links {
+    @include responsive(md) {
+      display: flex;
+      column-gap: $s-1;
+    }
+    a {
+      display: block;
+      margin-bottom: $s-2;
+      transition: color 0.2s;
+      &:hover {
+        color: getColor(first-color-lighter);
+      }
+    }
+  }
+  &__social {
+    margin-right: $s-3;
+    transition: color 0.2s;
+    &:hover {
+      color: getColor(first-color-lighter);
+    }
+  }
+  &__copy {
+    color: getColor(text-color);
+    // text-align: center;
+    justify-self: center;
+    @include responsive(md) {
+      grid-column: 2/3;
+    }
+   
+  }
+  &__title,
+  &__subtitle,
+  &__link,
+  &__social {
+    color: #fff;
+  }
+}

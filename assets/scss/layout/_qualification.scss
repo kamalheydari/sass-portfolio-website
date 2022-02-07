@@ -1,0 +1,36 @@
+.qualification {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__tabs {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 5rem;
+    margin-bottom: $s-2;
+  }
+  .tabs {
+    &__btn {
+      color: getColor(text-color);
+      font-size: $s-2;
+      padding: $s-0-5;
+      display: flex;
+      align-items: center;
+      column-gap: $s-0-25;
+      &:hover {
+        color: getColor(first-color);
+      }
+    }
+    &__btn--active {
+      color: getColor(first-color);
+    }
+  }
+  &__section {
+    display: none;
+  }
+  &__section--active {
+    display: block;
+  }
+}

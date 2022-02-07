@@ -1,0 +1,56 @@
+.about {
+  &__content {
+    display: grid;
+    row-gap: $s-2;
+    justify-items: center;
+
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__img {
+    width: min(100%, 30rem);
+    border-radius: $s-0-75;
+    overflow: hidden;
+    @include responsive(md) {
+      width: min(100%, 32rem);
+    }
+    img {
+      height: 100%;
+    }
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: $s-2-5;
+    @include responsive(md) {
+      align-items: flex-start;
+    }
+  }
+
+  .data {
+    &__desc {
+      text-align: center;
+      width: min(100%, 45rem);
+      @include responsive(md) {
+        text-align: start;
+      }
+    }
+    &__info {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+      .title {
+        display: block;
+        color: getColor(title-color);
+        font-weight: 700;
+        font-size: $s-2-5;
+        margin-bottom: $s-0-25;
+      }
+    }
+  }
+}

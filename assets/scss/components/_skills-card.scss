@@ -1,0 +1,80 @@
+.skills__card {
+  background-color: getColor(container-color);
+  box-shadow: $shadow;
+  transition: 0.2s;
+  width: min(100%, 45rem);
+  border-radius: $s-0-25;
+  &:hover {
+    box-shadow: $shasow-hover;
+  }
+  .card {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: $s-1 $s-0-5;
+
+      i {
+        color: getColor(first-color);
+      }
+      h3 {
+        font-size: $s-2;
+        margin-bottom: $s-0-5;
+      }
+      span {
+        color: getColor(text-color-light);
+      }
+    }
+
+    &__content {
+      height: 0;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+  }
+
+  .data {
+    margin-bottom: $s-2;
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: $s-0-5;
+      h4 {
+        font-weight: 300;
+        font-size: $s-1-5;
+      }
+      span {
+        font-size: $s-1-5;
+      }
+    }
+    &__percentage {
+      display: block;
+      background-color: getColor(first-color);
+      height: 5px;
+    }
+    &__bar {
+      background-color: getColor(first-color-lighter);
+      height: 5px;
+      border-radius: $s-0-25;
+    }
+  }
+  @each $element, $width in $skills {
+    .#{$element} {
+      width: $width;
+    }
+  }
+  .skill-datas {
+    padding: $s-2 $s-1;
+  }
+}
+.skills__arrow {
+  transition:transform 0.3s;
+}
+.skills__card--open {
+  .skills__arrow {
+    transform: rotate(-180deg);
+  }
+}

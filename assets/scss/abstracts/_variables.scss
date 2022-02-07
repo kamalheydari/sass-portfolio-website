@@ -1,0 +1,62 @@
+//  * Colors * //
+$hue-color: 315; /*Purple 250 - Green 142 - Blue 230 - Pink 340  2 25 37 190 170 270 315*/
+$colors: (
+  first-color: hsl($hue-color, 69%, 61%),
+  first-color-second: hsl($hue-color, 69%, 61%),
+  first-color-alt: hsl($hue-color, 57%, 53%),
+  first-color-lighter: hsl($hue-color, 92%, 85%),
+  title-color: hsl($hue-color, 10%, 25%),
+  text-color: hsl($hue-color, 8%, 45%),
+  text-color-light: hsl($hue-color, 8%, 65%),
+  input-color: hsl($hue-color, 70%, 96%),
+  body-color: hsl($hue-color, 60%, 99%),
+  container-color: #fff,
+  shadow-color: rgba(0, 0, 0, 0.15),
+);
+
+:root {
+  @each $name, $color in $colors {
+    --#{$name}: #{$color};
+  }
+}
+
+//  * fonts * //
+$body-font: "Poppins", sans-serif;
+
+//  * skills * //
+$skills: (
+  html: 90%,
+  css: 80%,
+  js: 60%,
+  react: 85%,
+  php: 80%,
+  node: 70%,
+  firebase: 90%,
+  python: 55%,
+  figma: 90%,
+  sketch: 85%,
+  photoshop: 85%,
+);
+
+//  * Shadows * //
+$shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+$shasow-hover: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+//  * Sizes * //
+$max-width: 1024px;
+
+$header-height: 4.5rem;
+
+$s-0-25: 0.25rem;
+$s-0-5: 0.5rem;
+$s-0-75: 0.75rem;
+$s-1: 1rem;
+$s-1-5: 1.5rem;
+$s-2: 2rem;
+$s-2-5: 2.5rem;
+$s-3: 3rem;
+$s-3-5: 3.5rem;
+$s-4: 4rem;
+$s-4-5: 4.5rem;
+$s-5: 5rem;
+$s-5-5: 5.5rem;

@@ -1,0 +1,12 @@
+.services{
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: $s-2;
+        
+    @include responsive(md) {
+        grid-template-columns: repeat(3, 1fr);
+       
+      }
+    }
+}

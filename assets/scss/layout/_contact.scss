@@ -1,0 +1,38 @@
+.contact {
+  &__content {
+    display: grid;
+    row-gap: $s-3;
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+  &__item {
+    margin-bottom: $s-2;
+    display: flex;
+    column-gap: $s-2;
+    align-items: center;
+    i {
+      color: getColor(first-color);
+    }
+    span {
+      margin-bottom: $s-0-5;
+      font-weight: 400;
+    }
+  }
+  .form__control {
+    background-color: getColor(input-color);
+    margin-bottom: $s-1-5;
+    border-radius: $s-0-5;
+    padding: $s-1-5;
+    color: getColor(text-color);
+
+    input::placeholder,textarea::placeholder {
+      color: getColor(text-color);
+    }
+    textarea {
+      width: 100%;
+      resize: none;
+    }
+  }
+}

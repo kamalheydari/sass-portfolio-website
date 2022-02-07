@@ -1,0 +1,19 @@
+.skills {
+  &__content {
+    display: grid;
+    row-gap: $s-2;
+    justify-items: center;
+
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: $s-2;
+    }
+
+    .empty {
+      display: none;
+      @include responsive(md) {
+        display: block;
+      }
+    }
+  }
+}
