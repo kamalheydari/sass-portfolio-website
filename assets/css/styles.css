@@ -443,8 +443,7 @@ body.dark-theme {
   justify-items: center;
   row-gap: 1rem;
   background-color: var(--first-color-second);
-  padding-top: 5rem;
-  padding-bottom: 0;
+  padding: 5rem 1rem 0;
   text-align: center;
 }
 @media (min-width: 576px) {

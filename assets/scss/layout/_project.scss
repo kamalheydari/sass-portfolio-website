@@ -6,8 +6,7 @@
     justify-items: center;
     row-gap: $s-1;
     background-color: getColor(first-color-second);
-    padding-top: $s-5;
-    padding-bottom: 0;
+    padding: $s-5 $s-1 0;
     text-align: center;
     @include responsive(sm) {
       grid-template-columns: repeat(2, 1fr);
