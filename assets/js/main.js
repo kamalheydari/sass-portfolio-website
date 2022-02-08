@@ -81,14 +81,26 @@ const allSkillCards = document.querySelectorAll(".skills__card");
 const allSkillContents = document.querySelectorAll(
   ".skills__card .card__content"
 );
+
+const getHeight = (element) => {
+  return element.getBoundingClientRect().height;
+};
+
+
+//? open first card
+allSkillContents[0].style.height = `${getHeight(
+  allSkillContents[0].querySelector(".skill-datas")
+)}px`;
+allSkillCards[0].classList.add('skills__card--open')
+
 allSkillCards.forEach((skill) => {
   const skillHeader = skill.querySelector(".card__header");
   const skillContent = skill.querySelector(".card__content");
   const skillDatas = skill.querySelector(".skill-datas");
 
   skillHeader.addEventListener("click", () => {
-    const contentHeight = skillContent.getBoundingClientRect().height;
-    const datasHeight = skillDatas.getBoundingClientRect().height;
+    const contentHeight = getHeight(skillContent);
+    const datasHeight = getHeight(skillDatas);
 
     if (contentHeight === 0) {
       allSkillContents.forEach((content) => {

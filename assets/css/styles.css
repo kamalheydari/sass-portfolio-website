@@ -593,10 +593,9 @@ body.dark-theme {
 }
 
 .qualification__content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
+  width: min(100%, 45rem);
+  margin: 0 auto;
 }
 .qualification__tabs {
   display: flex;
@@ -618,11 +617,22 @@ body.dark-theme {
 .qualification .tabs__btn--active {
   color: var(--first-color);
 }
+.qualification__sections {
+  position: relative;
+  height: 35rem;
+}
 .qualification__section {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
 }
 .qualification__section--active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .skills__content {

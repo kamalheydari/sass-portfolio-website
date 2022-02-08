@@ -1,9 +1,8 @@
 .qualification {
   &__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: grid;
+    width: min(100%, 45rem);
+    margin: 0 auto;
   }
   &__tabs {
     display: flex;
@@ -27,10 +26,22 @@
       color: getColor(first-color);
     }
   }
+  &__sections {
+    position: relative;
+    height: 35rem;
+  }
   &__section {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+  
   }
   &__section--active {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 }
