@@ -162,35 +162,35 @@ window.addEventListener("scroll", () => {
   });
 });
 
-//! testimonial swiper
-let swiperTestimonial = new Swiper(".testimonial__content", {
-  loop: true,
-  grabCursor: true,
-  spaceBetween: 48,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-    },
-  },
-});
+// //! testimonial swiper
+// let swiperTestimonial = new Swiper(".testimonial__content", {
+//   loop: true,
+//   grabCursor: true,
+//   spaceBetween: 48,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//     dynamicBullets: true,
+//   },
+//   breakpoints: {
+//     768: {
+//       slidesPerView: 2,
+//     },
+//   },
+// });
 
-//! portfolio swiper
-let swiperPortfolio = new Swiper(".portfolio__content", {
-  cssMode: true,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  mousewheel: true,
-  keyboard: true,
-});
+// //! portfolio swiper
+// let swiperPortfolio = new Swiper(".portfolio__content", {
+//   cssMode: true,
+//   loop: true,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   mousewheel: true,
+//   keyboard: true,
+// });

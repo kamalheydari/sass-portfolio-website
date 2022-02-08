@@ -63,7 +63,7 @@
             </li>
           </ul>
           <button class="nav__close-btn" id="close-btn">
-            <i class="uil uil-times " ></i>
+            <i class="uil uil-times"></i>
           </button>
         </nav>
         <div class="header__btns">
@@ -200,7 +200,7 @@
                 <span>More than 4 years</span>
               </div>
               <div class="header__icon skills__arrow">
-                <i class="uil uil-angle-down "></i>
+                <i class="uil uil-angle-down"></i>
               </div>
             </div>
             <div class="card__content" style="height: auto;">
@@ -257,7 +257,7 @@
                 <span>More than 2 years</span>
               </div>
               <div class="header__icon skills__arrow">
-                <i class="uil uil-angle-down "></i>
+                <i class="uil uil-angle-down"></i>
               </div>
             </div>
             <div class="card__content">
@@ -313,7 +313,7 @@
                 <span>More than 5 years</span>
               </div>
               <div class="header__icon skills__arrow">
-                <i class="uil uil-angle-down "></i>
+                <i class="uil uil-angle-down"></i>
               </div>
             </div>
             <div class="card__content">
@@ -398,7 +398,6 @@
                   <h4 class="data__title">Web Design</h4>
                   <span class="data__subtitle">Spain - Institute</span>
                   <div class="data__calender">
-                    
                     <i class="uil uil-calendar-alt"></i>
                     2014 - 2017
                   </div>
@@ -752,7 +751,6 @@
                   <i class="uil uil-star testimonial__icon-star"></i>
                   <i class="uil uil-star testimonial__icon-star"></i>
                   <i class="uil uil-star testimonial__icon-star"></i>
-                 
                 </div>
               </div>
               <p class="card__content">
@@ -899,9 +897,38 @@
         </p>
       </div>
     </footer>
-    <!-- * SWIPER JS * -->
-    <script src="./assets/js/swiper-bundle.min.js"></script>
     <!-- * MAIN JS * -->
     <script src="./assets/js/main.js"></script>
+
+    <!-- * SWIPER JS * -->
+    <!-- <script src="./assets/js/swiper-bundle.min.js"></script> -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script>
+      //! testimonial swiper
+      let swiperTestimonial = new Swiper(".testimonial__content", {
+        loop: true,
+        grabCursor: true,
+        spaceBetween: 48,
+
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+        },
+      });
+
+      //! portfolio swiper
+      let swiperPortfolio = new Swiper(".portfolio__content", {
+        cssMode: true,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
   </body>
 </html>
