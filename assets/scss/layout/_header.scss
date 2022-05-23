@@ -12,7 +12,7 @@
     bottom: initial;
     padding: $s-3 $s-2;
   }
-  
+
   &__content {
     display: flex;
     justify-content: space-between;
@@ -22,7 +22,6 @@
       max-width: $max-width;
       margin: 0 auto;
     }
-    
   }
 
   &__nav {
@@ -30,7 +29,7 @@
     left: 0;
     bottom: -100%;
     width: 100%;
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 -1px 4px getColor(shadow-color);
     border-radius: $s-1-5 $s-1-5 0 0;
     padding: $s-2 $s-1-5 $s-4;
     background-color: getColor(body-color);
@@ -124,5 +123,5 @@
 
 //! scroll header shadow
 .scroll-header {
-  box-shadow: 0 -2px 8px getColor(shadow-color) ;
+  box-shadow: 0 -2px 8px getColor(shadow-color);
 }
